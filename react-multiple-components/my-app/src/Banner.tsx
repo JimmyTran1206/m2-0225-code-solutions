@@ -1,9 +1,13 @@
-export function Banner(){
+type Props={
+  item:string
+}
+export function Banner({item}:Props){
+
   return (
     <>
-      <div>
-        Banner
-      </div>
+      <h2>
+        {item}
+      </h2>
     </>
 
   )

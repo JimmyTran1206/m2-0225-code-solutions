@@ -1,7 +1,11 @@
-export function NextButton(){
+type Props={
+  eventHandler:()=>void
+}
+export function NextButton({eventHandler}:Props){
+
   return (
     <>
-      <button>Next</button>
+      <button onClick={eventHandler}>Next</button>
     </>
   )
 }

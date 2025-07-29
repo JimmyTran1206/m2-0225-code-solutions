@@ -1,9 +1,16 @@
 import './Indicators.css'
-export function Indicators(){
+type Props={
+  count:number
+  current:number
+  updateIndex:(arg0:number)=>void
+}
+export function Indicators({count,current, updateIndex}:Props){
   const buttons = [];
-  const count = 6
   for (let i = 0; i < count; i++) {
-    buttons.push(<button>{i}</button>);
+    const btnClickHandler=()=>{
+      updateIndex(i)
+    }
+    buttons.push(<button  style={{ backgroundColor: i === current ? 'darkblue' : '#1a1a1a' }} onClick={btnClickHandler}>{i}</button>);
   }
   return (
     <>

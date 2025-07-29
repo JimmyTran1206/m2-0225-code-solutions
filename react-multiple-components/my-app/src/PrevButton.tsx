@@ -1,7 +1,11 @@
-export function PrevButton(){
+type Props={
+  eventHandler:()=>void
+}
+export function PrevButton({eventHandler}:Props){
+
   return (
     <>
-      <button>Previous</button>
+      <button onClick={eventHandler}>Previous</button>
     </>
   )
 }

@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <RotatingBanner />
+      <RotatingBanner items={items}/>
     </>
   )
 }
