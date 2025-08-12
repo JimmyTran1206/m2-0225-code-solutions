@@ -2,10 +2,11 @@ import { useEffect, useRef, type ReactNode } from "react"
 
 type Props={
   children: ReactNode,
-  isOpen:boolean
+  isOpen:boolean,
+  onClose: ()=>void
 }
 
-export function Modal({children, isOpen}:Props){
+export function Modal({children, isOpen, onClose}:Props){
   const modal=useRef<HTMLDialogElement>(null)
   useEffect(()=>{
         if(isOpen){modal.current?.showModal()}
@@ -13,7 +14,7 @@ export function Modal({children, isOpen}:Props){
       },[isOpen])
   return(
     <>
-      <dialog ref={modal}>{children}</dialog>
+      <dialog ref={modal} onClose={onClose}>{children}</dialog>
     </>
   )
 }
