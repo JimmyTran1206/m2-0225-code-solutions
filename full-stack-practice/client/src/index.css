@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .container {
+    @apply w-[80%] max-w-[1200px] mt-0 mx-auto px-8 py-6;
+  }
+
+  .img-wrapper {
+    @apply w-[200px] h-[200px] mx-auto;
+  }
+
+  .card {
+    @apply p-8 border border-gray-400 rounded-md m-[10px] basis-[calc(100%-20px)] max-w-[340px] md:basis-[calc(50%-20px)] shadow-md flex flex-col gap-4;
+  }
+
+  .card-wrapper {
+    @apply mx-auto md:mx-0;
+  }
+}
