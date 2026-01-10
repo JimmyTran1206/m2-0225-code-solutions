@@ -1,0 +1,7 @@
+header {
+  transition: width 0.5s ease;
+}
+
+header h1 {
+  transition: margin 0.5s ease;
+}
